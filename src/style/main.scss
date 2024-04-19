@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+// main
+@mixin section_a(){
+    .hero{
+        height:300px;
+        width:100%;
+        // background-color:black;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        padding:20px;
+
+        .contentdisplay{
+            position: relative;
+            z-index:99;
+            color: ghostwhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row;
+
+            .side_herocontent{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column;  
+                flex: 1;
+                height:100%;
+                width:100%;
+                padding:10px;
+
+
+                h1{
+                    margin-top:20px;
+                    width:100%;
+                }
+
+                .tageve{
+                    margin-top:20px;
+                    width:100%;
+
+                    .tag{
+                        display: inline;
+                        font-size: small;
+                        font-weight: lighter;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .side_heroimage{
+                flex: 1;
+            }
+        }
+
+        &::before{
+            content:'';
+            clear: both;
+            position: absolute;
+            z-index:3;
+            top:0;
+            left:0;
+            background-color:rgba(14, 14, 14, 0.76);
+
+            // backdrop-filter: blur(10px);
+            width:100%;
+            height:100%;
+        }
+
+        &::after{
+            content:'';
+            clear: both;
+            position: absolute;
+            z-index:1;
+            top:0;
+            left:0;
+            filter: blur(16px);
+            background-image: url('https://w0.peakpx.com/wallpaper/118/414/HD-wallpaper-galaxy-milky-way-color-milky-way-mountains-purple-space-universe.jpg');
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            width:100%;
+            height:100%;
+        }
+
+    }
+}
+
+
+
+
+
+.content{
+    height:200vh;
+    width:100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    nav{
+        padding:10px;
+    }
+
+
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row;
+        flex: 1;
+
+        width:100%;
+        height:100%;
+    
+        aside{
+            border: 1px solid black;
+            flex: 1;
+            padding:20px;
+            height:100%;
+            width:100%;
+            background-color: rgb(248, 245, 245);
+        }
+        
+    
+        aside:nth-child(1){
+            flex: .65;
+        }
+
+
+
+
+    
+        main{
+            flex: 3;
+            height:100%;
+            width:100%;
+            background-color: ghostwhite;
+            padding:10px;
+            border: 1px solid red;
+
+
+            @include section_a();
+        }
+    }
+    
+}
