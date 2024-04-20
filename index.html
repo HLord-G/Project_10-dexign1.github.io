@@ -120,30 +120,46 @@
                     <div class="project_display">
 
                         <div class="project_item">
-                            <div class="project_img"></div>
+                            <div class="project_img" style="background-image: url(src/img/a.jpg);"></div>
                             <div class="content_text">
-                                sdfsd sef s
+                                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nostrum!</p>
                             </div>
                         </div>
                         <div class="project_item">
-                            <div class="project_img"></div>
-                            <div class="content_text"></div>
+                            <div class="project_img" style="background-image: url(src/img/b.jpg);"></div>
+                            <div class="content_text">
+                                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nostrum!</p>
+                            </div>
                         </div>
                         <div class="project_item">
-                            <div class="project_img"></div>
-                            <div class="content_text"></div>
+                            <div class="project_img" style="background-image: url(src/img/c.jpg);"></div>
+                            <div class="content_text">
+                                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nostrum!</p>
+                            </div>
                         </div>
                         <div class="project_item">
-                            <div class="project_img"></div>
-                            <div class="content_text"></div>
+                            <div class="project_img" style="background-image: url(src/img/d.jpg);"></div>
+                            <div class="content_text">
+                                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nostrum!</p>
+                            </div>
                         </div>
                         <div class="project_item">
-                            <div class="project_img"></div>
-                            <div class="content_text"></div>
+                            <div class="project_img" style="background-image: url(src/img/e.jpg);"></div>
+                            <div class="content_text">
+                                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nostrum!</p>
+                            </div>
                         </div>
                         <div class="project_item">
-                            <div class="project_img"></div>
-                            <div class="content_text"></div>
+                            <div class="project_img" style="background-image: url(src/img/f.jpg);"></div>
+                            <div class="content_text">
+                                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nostrum!</p>
+                            </div>
                         </div>
 
                     </div>
@@ -204,28 +220,12 @@
 
         $(".slide_item").hover(function() {
             setTimeout(() => {
-                $(this).find(".img_back").css("background-position", "top");
-            }, 100);
-
-            setTimeout(() => {
-                $(this).find(".img_back").css("background-position", "center");
-            }, 500);
-
-            setTimeout(() => {
                 $(this).find(".img_back").css("background-position", "bottom");
-            }, 900);
+            }, 200);
         }, function() {
             setTimeout(() => {
-                $(this).find(".img_back").css("background-position", "bottom");
-            }, 100);
-
-            setTimeout(() => {
-                $(this).find(".img_back").css("background-position", "center");
-            }, 500);
-
-            setTimeout(() => {
                 $(this).find(".img_back").css("background-position", "top");
-            }, 900);
+            }, 200);
         });
 
     </script>

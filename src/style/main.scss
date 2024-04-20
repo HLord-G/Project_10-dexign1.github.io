@@ -348,7 +348,6 @@
                     &:hover{
                         color: ghostwhite;
                         background-color: rgb(214, 27, 58);
-                        border: 1px solid rgba(0, 0, 0, 0.322);
                         font-weight: 400;
                     }
                 }
@@ -356,7 +355,6 @@
                 .active{
                     color: ghostwhite;
                     background-color: rgb(214, 27, 58);
-                    border: 1px solid rgba(0, 0, 0, 0.322);
                     font-weight: 400;
                 }
             }
@@ -390,10 +388,9 @@
                     top:0; left:0;
                     width:100%;
                     height:100%;
-                    background-image: url('../img/g.jpg');
-                    background-position: center;
+                    background-position: top;
                     background-repeat: no-repeat;
-                    background-size: auto;
+                    background-size: cover;
                     transition: .5s;
                 }
 
@@ -401,20 +398,25 @@
                     position: absolute;
                     bottom:0px; left:0px;
                     z-index:999;
-                    color:ghostwhite;
-                    opacity:.2;
+                    color:rgb(255, 255, 255);
+                    opacity:.6;
                     transition: 2s;
                     padding:10px;
+                    h4{
+                    margin-bottom:5px;
+                    }
                     
                 }
 
                 &:hover .project_img{
-                    background-size:cover;
-                    filter: blur(1px);
+                    background-position: center;
+                    filter: blur(5px);
                 }
 
                 &:hover .content_text{
                     opacity:1;
+                    border-top: 2px solid rgba(0, 0, 0, 0.61);
+                    background-color: rgba(29, 29, 29, 0.478);
                 }
             }
         }
@@ -422,7 +424,204 @@
     }
     
 }
+@mixin section_c_md_551(){
+    .projects{
+        margin-top:25px;
+    
+        .project_display{
+            width:100%;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap:20px;
+            padding:20px;
+            transition: .5s;
 
+            .project_item{
+                width:230px;
+                height:250px;
+                border: 1px solid rgba(0, 0, 0, 0.438);
+                border-radius:10px;
+                cursor: pointer;
+                overflow: hidden;
+                position: relative;
+                margin-top:10px;
+                transition: .5s;
+
+                .project_img{
+                    position: absolute;
+                    top:0; left:0;
+                    width:100%;
+                    height:100%;
+                    background-position: top;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    transition: .5s;
+                }
+
+                .content_text{
+                    position: absolute;
+                    bottom:0px; left:0px;
+                    z-index:999;
+                    color:rgb(255, 255, 255);
+                    opacity:.6;
+                    transition: 2s;
+                    padding:10px;
+                    h4{
+                    margin-bottom:5px;
+                    }
+                    
+                }
+
+                &:hover .project_img{
+                    background-position: center;
+                    filter: blur(5px);
+                }
+
+                &:hover .content_text{
+                    opacity:1;
+                    border-top: 2px solid rgba(0, 0, 0, 0.61);
+                    background-color: rgba(29, 29, 29, 0.478);
+                }
+            }
+        }
+
+    }
+    
+}
+@mixin section_c_md_559(){
+    .projects{
+        margin-top:25px;
+    
+        .project_display{
+            width:100%;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap:20px;
+            padding:20px;
+            transition: .5s;
+
+            .project_item{
+                width:200px;
+                height:210px;
+                border: 1px solid rgba(0, 0, 0, 0.438);
+                border-radius:10px;
+                cursor: pointer;
+                overflow: hidden;
+                position: relative;
+                margin-top:10px;
+                transition: .5s;
+
+                .project_img{
+                    position: absolute;
+                    top:0; left:0;
+                    width:100%;
+                    height:100%;
+                    background-position: top;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    transition: .5s;
+                }
+
+                .content_text{
+                    position: absolute;
+                    bottom:0px; left:0px;
+                    z-index:999;
+                    color:rgb(255, 255, 255);
+                    opacity:.6;
+                    transition: 2s;
+                    padding:10px;
+                    h4{
+                    margin-bottom:5px;
+                    }
+                    
+                }
+
+                &:hover .project_img{
+                    background-position: center;
+                    filter: blur(5px);
+                }
+
+                &:hover .content_text{
+                    opacity:1;
+                    border-top: 2px solid rgba(0, 0, 0, 0.61);
+                    background-color: rgba(29, 29, 29, 0.478);
+                }
+            }
+        }
+
+    }
+    
+}
+@mixin section_c_md_499(){
+    .projects{
+        margin-top:25px;
+    
+        .project_display{
+            width:100%;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap:20px;
+            padding:20px;
+            transition: .5s;
+
+            .project_item{
+                width:330px;
+                height:350px;
+                border: 1px solid rgba(0, 0, 0, 0.438);
+                border-radius:10px;
+                cursor: pointer;
+                overflow: hidden;
+                position: relative;
+                margin-top:10px;
+                transition: .5s;
+
+                .project_img{
+                    position: absolute;
+                    top:0; left:0;
+                    width:100%;
+                    height:100%;
+                    background-position: top;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    transition: .5s;
+                }
+
+                .content_text{
+                    position: absolute;
+                    bottom:0px; left:0px;
+                    z-index:999;
+                    color:rgb(255, 255, 255);
+                    opacity:.6;
+                    transition: 2s;
+                    padding:10px;
+                    h4{
+                    margin-bottom:5px;
+                    }
+                    
+                }
+
+                &:hover .project_img{
+                    background-position: center;
+                    filter: blur(5px);
+                }
+
+                &:hover .content_text{
+                    opacity:1;
+                    border-top: 2px solid rgba(255, 255, 255, 0.61);
+                    background-color: rgba(29, 29, 29, 0.478);
+                }
+            }
+        }
+
+    }
+    
+}
 
 
 
@@ -532,5 +731,40 @@
             }
         }
 
+    }
+}
+
+// 551
+@media(max-width:560px){
+    .content{
+        section{
+            main{
+                @include section_c_md_551();
+            }
+        }
+
+    }
+}
+
+
+@media(max-width:559px){
+    .content{
+        section{
+            main{
+                @include section_c_md_559();
+            }
+        }
+    }
+}
+
+
+// 
+@media(max-width:499px){
+    .content{
+        section{
+            main{
+                @include section_c_md_499();
+            }
+        }
     }
 }
