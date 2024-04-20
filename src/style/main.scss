@@ -714,7 +714,17 @@
 
         .side_left{
             flex: .65 ;
-            
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+
+            a{
+                display: flex;
+                justify-content:flex-start;
+                align-items: center;
+                text-decoration: none;
+                color: #1d1d1d;
+            }
         }
  
         .side_right{
@@ -732,9 +742,9 @@
                 flex-flow: row;
 
                 .searchme{
-                    padding:3px 5px;
+                    padding:6px 10px;
                     width:230px;
-                    border: 1px solid rgba(0, 0, 0, 0.589);
+                    border: 1px solid rgba(0, 0, 0, 0.411);
                     border-radius: 2px;
                     display: flex;
                     justify-content: space-between;
@@ -755,7 +765,37 @@
                 }
 
                 .profile{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-flow: row;
                     padding:10px;
+                    margin-left:45px;
+                    cursor: pointer;
+
+                    .side_pro{
+                        width:30px;
+                        height:30px;
+                        border-radius: 50%;
+                        border: 1px solid rgba(29, 29, 29, 0.541);
+                        background-image: url('../img/profile.jpg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .side_name{
+                        margin-left:8px;
+                        h4{
+                            color:rgba(214, 27, 58, 0.829);
+                            padding:0;
+                            margin:0;
+                        }
+                        small{
+                            padding:0;
+                            margin:0;
+                        }
+                        line-height: 13px;
+                    }
                 }
             }
         }
@@ -884,9 +924,11 @@
 
 
                         .noti_item{
+                            opacity:.7;
 
                             &:hover{
                                 box-shadow: 2px 5px 16px 0px rgba(0, 0, 0, 0.158);
+                                opacity:1;
                             }
                             
                             transition: .4s;
