@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Dexign 1</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="src/style/main.css">
 
 </head>
@@ -27,13 +27,11 @@
 
                 <br>
                 <div class="hero">
-
                     <div class="contentdisplay">
                         <div class="side_herocontent">
                             
                             <h1>
-                                Must expected secret NFT <br>
-                                Assortment is live..
+                                Must expected secret NFT Assortment is live..
                             </h1>
 
                             <div class="tageve">
@@ -42,16 +40,95 @@
                                 <div class="tag"><b>16K</b> Artist</div>
                             </div>
 
+                            <div class="hero_btn">
+                                <button>
+                                    Explore Now
+                                </button>
+                            </div>
+   
+
                         </div>
                         
-                        <div class="side_heroimage"></div>
-                    </div>
-
-
-
-
-                  
+                        <div class="side_heroimage">
+                            <div class="img_hero"> </div>
+                            <div class="img_hero"> </div>
+                            <div class="img_hero"> </div>
+                        </div>
+                    </div>                  
                 </div>
+
+
+                <div class="slides">
+                    <div class="slide_header">
+                        <h1>Trending</h1>
+                        <div class="slide_btn">
+                            <div class="slide_left">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 256 512"><path d="M9.4 278.6c-12.5-12.5-12.5-32.8 0-45.3l128-128c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 256c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-128-128z"/></svg>
+                            </div>
+                            <div class="slide_right">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" width="25" height="25" fill="currentColor" ><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slides_sections">
+
+                        <div class="slide_item">
+                            <div class="img_back" style="background-image: url(src/img/b.jpg);"></div>
+                            <div class="contene">
+                                Study Body
+                            </div>
+                        </div>
+
+                        <div class="slide_item">
+                            <div class="img_back" style="background-image: url(src/img/c.jpg);"></div>
+                            <div class="contene">
+                                Fucos Boy
+                            </div>
+                        </div>
+          
+                        <div class="slide_item">
+                            <div class="img_back" style="background-image: url(src/img/d.jpg);"></div>
+                            <div class="contene">
+                                Merror Out Side
+                            </div>
+                        </div>
+
+                        
+                        <div class="slide_item">
+                            <div class="img_back" style="background-image: url(src/img/e.jpg);"></div>
+                            <div class="contene">
+                                Play Boy
+                            </div>
+                        </div>
+                  
+
+                    </div>
+                </div>
+
+
+                <div class="projects">
+                    <div class="project_header">
+                        <h1>Projects</h1>
+
+                        <div class="btn_areas">
+                            <button>ghf</button>
+                            <button>ghf</button>
+                            <button>ghf</button>
+                        </div>
+                    </div>
+                    <div class="project_display">
+
+                        <div class="project_item"></div>
+                        <div class="project_item"></div>
+                        <div class="project_item"></div>
+                        <div class="project_item"></div>
+                        <div class="project_item"></div>
+                        <div class="project_item"></div>
+
+                    </div>
+                </div>
+
+
 
             </main>
             <aside></aside>
@@ -60,5 +137,76 @@
 
 
 
+
+
+
+
+    <script>
+        document.querySelector('.slide_left').addEventListener('click', function() {
+            document.querySelector('.slides_sections').scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        });
+
+        document.querySelector('.slide_right').addEventListener('click', function() {
+            document.querySelector('.slides_sections').scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        });
+
+
+
+
+        var isDragging = false;
+        var lastX;
+
+        $(".slides_sections").on('mousedown', function(e) {
+            isDragging = true;
+            lastX = e.clientX;
+        }).on('mousemove', function(e) {
+            if (isDragging) {
+                var deltaX = e.clientX - lastX;
+                lastX = e.clientX;
+                var scrollLeft = $(".slides_sections").scrollLeft() - deltaX;
+                $(".slides_sections").scrollLeft(scrollLeft);
+            }
+        }).on('mouseup', function() {
+            isDragging = false;
+        }).on('mouseleave', function() {
+            isDragging = false;
+        });
+
+
+
+
+        $(".slide_item").hover(function() {
+            setTimeout(() => {
+                $(this).find(".img_back").css("background-position", "top");
+            }, 100);
+
+            setTimeout(() => {
+                $(this).find(".img_back").css("background-position", "center");
+            }, 500);
+
+            setTimeout(() => {
+                $(this).find(".img_back").css("background-position", "bottom");
+            }, 900);
+        }, function() {
+            setTimeout(() => {
+                $(this).find(".img_back").css("background-position", "bottom");
+            }, 100);
+
+            setTimeout(() => {
+                $(this).find(".img_back").css("background-position", "center");
+            }, 500);
+
+            setTimeout(() => {
+                $(this).find(".img_back").css("background-position", "top");
+            }, 900);
+        });
+
+    </script>
 </body>
 </html>
